@@ -1,0 +1,396 @@
+
+/* ===== BrandShield AI: Modern Cybersecurity UI ===== */
+
+:root {
+  --bg: #080d1a;
+  --panel: #101a2d;
+  --panel2: #17243b;
+  --line: #293956;
+  --text: #f3f6ff;
+  --muted: #9baac5;
+  --blue: #7795ff;
+  --cyan: #4de1ed;
+  --red: #ff647c;
+  --amber: #ffca70;
+  --green: #50e0a5;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 85% 0%, #23376a55, transparent 35%),
+    linear-gradient(145deg, #080d1a, #0c1425 60%, #10182a);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(9, 15, 30, 0.96);
+  border-right: 1px solid #283653;
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  background: linear-gradient(135deg, #7795ff, #4de1ed);
+  border-radius: 13px;
+  box-shadow: 0 0 25px #7795ff35;
+}
+
+.brand h1 {
+  letter-spacing: -0.4px;
+}
+
+.nav button {
+  transition: all 0.25s ease;
+}
+
+.nav button:hover,
+.nav button.active {
+  background: linear-gradient(100deg, #25385d, #17243d);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.nav button.active {
+  box-shadow: inset 3px 0 var(--cyan);
+}
+
+/* Page heading */
+.page-title {
+  font-size: clamp(23px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.eyebrow {
+  color: var(--cyan);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Dashboard cards */
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(22, 34, 56, 0.97),
+    rgba(13, 22, 39, 0.98)
+  );
+  border: 1px solid #2b3b59;
+  border-radius: var(--radius);
+  padding: 21px;
+  box-shadow: 0 10px 30px #00000012;
+  transition: border-color 0.25s, transform 0.25s,
+              box-shadow 0.25s;
+}
+
+.card:hover {
+  border-color: #526b9d;
+  box-shadow: 0 14px 35px #00000025;
+}
+
+.metric-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #243758;
+  color: var(--cyan);
+}
+
+.metric-value {
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 850;
+  letter-spacing: -1px;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid #354765;
+  border-radius: 11px;
+  padding: 11px 16px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+  box-shadow: 0 6px 18px #00000025;
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, #718fff, #536ef0);
+  color: #ffffff;
+  box-shadow: 0 6px 22px #647eff35;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(120deg, #89a2ff, #657fff);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+/* Search fields and forms */
+.field {
+  background: #0a1324;
+  border: 1px solid #344563;
+  border-radius: 11px;
+  padding: 12px 14px;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px #4de1ed20;
+}
+
+.field::placeholder {
+  color: #7384a3;
+}
+
+.form-field label {
+  color: #c1cde3;
+  font-weight: 700;
+}
+
+/* Tables */
+.table-wrap {
+  border-radius: 12px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  color: #94a6c7;
+  background: #101a2b;
+  padding: 14px 10px;
+}
+
+td {
+  padding: 16px 10px;
+  border-bottom: 1px solid #27344c;
+}
+
+tbody tr {
+  transition: background 0.2s;
+}
+
+tbody tr:hover {
+  background: #23345270;
+}
+
+.asset-icon {
+  background: linear-gradient(135deg, #263c61, #1a2a45);
+  border: 1px solid #354d73;
+  border-radius: 11px;
+}
+
+/* Risk indicators */
+.tag {
+  padding: 6px 10px;
+  letter-spacing: 0.2px;
+}
+
+.tag.high,
+.tag.confirmed {
+  color: #ff9eae;
+  background: #492335;
+  border: 1px solid #74334a;
+}
+
+.tag.medium,
+.tag.review {
+  color: #ffd58c;
+  background: #40331f;
+  border: 1px solid #6d542b;
+}
+
+.tag.low,
+.tag.false {
+  color: #79edbd;
+  background: #15392f;
+  border: 1px solid #28654e;
+}
+
+/* Scan panel */
+.scan-card {
+  background:
+    radial-gradient(circle at 100% 0%, #506fc044, transparent 50%),
+    linear-gradient(140deg, #1d3157, #111c32);
+  border-color: #3a5483;
+}
+
+.scan-options button {
+  border-radius: 11px;
+  padding: 13px 10px;
+  transition: all 0.2s ease;
+}
+
+.scan-options button:hover {
+  background: #1c3151;
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+/* Source coverage */
+.bar {
+  height: 8px;
+  background: #293752;
+  border-radius: 20px;
+}
+
+.bar span {
+  border-radius: 20px;
+  box-shadow: 0 0 12px #7795ff35;
+}
+
+/* Activity feed */
+.activity-item {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #25334b;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-dot {
+  box-shadow: 0 0 10px #7795ff55;
+}
+
+/* Brand profile */
+.brand-asset {
+  background: #0b1527;
+  border-color: #30415e;
+}
+
+.logo-preview {
+  box-shadow: 0 0 20px #7795ff25;
+}
+
+.notice {
+  background: #192944;
+  border-color: #354e78;
+  border-radius: 12px;
+  line-height: 1.7;
+}
+
+/* Investigation modal */
+.modal {
+  background: linear-gradient(145deg, #152139, #0c1527);
+  border: 1px solid #3a4d70;
+  border-radius: 20px;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(6px);
+}
+
+/* Notifications */
+.toast {
+  background: #172640;
+  border: 1px solid #405780;
+  border-radius: 14px;
+  box-shadow: 0 15px 45px #00000055;
+}
+
+/* Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #405477 #0b1323;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1323;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #405477;
+  border-radius: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 1100px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    padding: 18px 12px 28px;
+  }
+
+  .topbar {
+    gap: 12px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .metrics {
+    gap: 10px;
+  }
+
+  .metric-value {
+    font-size: 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full {
+    grid-column: auto;
+  }
+
+  .side-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar > * {
+    width: 100%;
+  }
+
+  .search {
+    min-width: 0;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
